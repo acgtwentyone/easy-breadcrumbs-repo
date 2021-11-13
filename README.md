@@ -44,6 +44,26 @@ crumbItemStyle: Change the style of the the breadcrumb item container (wrapper).
 ## API
 Here is the customization properties you may use in order to customize your breadcrumb. There is brief description of prop, type, option, and description 
 
+| prop                        | type          | description                                                                 |
+| --------------------------- |:-------------:|:----------------------------------------------------------------------------|
+| chevron                     | boolean       | if to show chevron icon near of the crumb text. default to true             |
+| chevronStyle                | object        | style of the chevron icon (applied to the react native image)               |
+| crumbs                      | array         | array of crumb items                                                        |
+| onCrumbPress                | function      | callback when crumb is pressed                                              |
+| containerStyle              | object        | crumb container style                                                       |
+| selectedCrumbTextStyle      | object        | selected cumb text style                                                    |
+| chevronWidth                | number        | chevron width (chevron image width)                                         |
+| chevronHeight               | number        | chevron height (chevron image height)                                       |
+| selectedCrumbItemStyle      | object        | selected crumb container style                                              |
+| selectedCrumbStyle          | object        | outside crumb container style (applied to the touchable opacity component)  |
+| selectedCrumb               | object        | selected crumb                                                              |
+| setCrumbs                   | function      | function to update crumbs or set crumbs                                     |
+| setSelectedCrumb            | function      | function to set selected crumb                                              |
+| scrollable                  | boolean       | if crumbs container is scrollable. default to true                          |
+| unselectedCrumbStyle        | object        | style to be applied to all not selected crumbs container                    |
+| unselectedCrumbItemStyle    | object        | style to be applied to all not selected crumbs item container               |
+| unselectedCrumbTextStyle    | object        | style to be applied to all not selected crumbs text                         |
+
 ### Properties
 
 ## Maintainers
