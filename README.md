@@ -26,13 +26,29 @@ npm i react-native-easy-breadcrumbs
 
 Import this module:
 ```
-import {Count} from 'react-native-easy-breadcrumbs'
+import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 ```
 
 Use as a component
 ```
-<Count />
+const [crumbs, setCrumbs] = useState([
+    { id: 0, title: 'Root' }
+])
+const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
+    id: 0,
+    title: 'Root',
+})
+
+<EasyBreadcrumb
+    crumbs={crumbs}
+    setCrumbs={setCrumbs}
+    selectedCrumb={selectedCrumb}
+    setSelectedCrumb={setSelectedCrumb}
+    onCrumbPress={(crumb) => __onCrumbPress(crumb)}
+/>
 ```
+
+## for a more info, please check the example project to 
 
 # Customization
 Give the style props as your choice:
