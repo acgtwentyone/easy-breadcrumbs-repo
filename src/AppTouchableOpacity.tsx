@@ -31,9 +31,7 @@ const AppTouchableOpacity: React.FC<Props> = ({
 }
 
 const styles = StyleSheet.create({
-  container: {
-    margin: 1,
-  },
+  container: {},
 })
 
 export default AppTouchableOpacity
