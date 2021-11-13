@@ -2,7 +2,7 @@
   "name": "react-native-easy-breadcrumbs",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/demchenkoalex/react-native-easy-breadcrumbs#readme",
+  "homepage": "https://github.com/acgtwentyone/easy-breadcrumbs-repo",
   "main": "src/index.tsx",
   "types": "lib/index.d.ts",
   "author": "acgtwentyone <acgtwentyone@gmail.com>",
