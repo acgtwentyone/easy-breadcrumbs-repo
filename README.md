@@ -1,6 +1,6 @@
 # react-native-easy-breadcrumbs
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/acgtwentyone/easy-breadcrumbs-repo)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/acgtwentyone/easy-breadcrumbs-repo#readme)
 
 Android / ios package to create customizable breadcrumbs to use in react native projects
 
@@ -56,8 +56,7 @@ See [the contributing file](contributing.md)!
 
 PRs accepted.
 
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone
-/standard-readme) specification.
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/LICENSE) specification.
 
 ## License
 
