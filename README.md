@@ -48,7 +48,7 @@ const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
 />
 ```
 
-## for a more info, please check the example project to 
+###### for concrete example, please check the example folder in this repo
 
 # Customization
 Give the style props as your choice:
