@@ -80,7 +80,6 @@ Here is the customization properties you may use in order to customize your brea
 | unselectedCrumbItemStyle    | object        | style to be applied to all not selected crumbs item container               |
 | unselectedCrumbTextStyle    | object        | style to be applied to all not selected crumbs text                         |
 
-### Properties
 
 ## Maintainers
 
