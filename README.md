@@ -48,14 +48,7 @@ const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
 />
 ```
 
-###### for concrete example, please check the example folder in this repo
-
-# Customization
-Give the style props as your choice:
-
-containerStyle: Change the style of the container (wrapper).
-
-crumbItemStyle: Change the style of the the breadcrumb item container (wrapper).
+#### for concrete example, please check the example folder in this repo
 
 ## API
 Here is the customization properties you may use in order to customize your breadcrumb. There is brief description of prop, type, option, and description 
