@@ -1,14 +1,8 @@
 import React from 'react'
-import {
-  Image,
-  NativeModules,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { NativeModules, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Icon } from 'react-native-vector-icons/Icon'
 
-import AppTouchableOpacity from '../src/AppTouchableOpacity'
+import AppTouchableOpacity from './AppTouchableOpacity'
 
 export interface Crumb {
   id: number
@@ -43,7 +37,6 @@ export const EasyBreadcrumb: React.FC<Props> = ({
   containerStyle,
   selectedCrumbTextStyle,
   chevronWidth,
-  chevronHeight,
   selectedCrumbItemStyle,
   selectedCrumbStyle,
   selectedCrumb,
@@ -108,16 +101,10 @@ export const EasyBreadcrumb: React.FC<Props> = ({
                   {crumb.title}
                 </Text>
                 {chevron && (
-                  // <Icon
-                  //   name='chevron-right'
-                  //   size={chevronWidth ? chevronWidth : 30}
-                  //   color='#000'
-                  //   style={[styles.chevron, { ...chevronStyle }]}
-                  // />
-                  <Image
-                    source={require('./assets/outline_chevron_right_black_24.png')}
-                    width={chevronWidth ? chevronWidth : 15}
-                    height={chevronHeight ? chevronHeight : 15}
+                  <Icon
+                    name='chevron-right'
+                    size={chevronWidth ? chevronWidth : 30}
+                    color='#000'
                     style={[styles.chevron, { ...chevronStyle }]}
                   />
                 )}

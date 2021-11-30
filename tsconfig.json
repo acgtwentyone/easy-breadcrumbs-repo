@@ -15,7 +15,4 @@
   },
   "exclude": ["**/__tests__/*"],
   "include": ["src"],
-  "paths": {
-    "react-native-easy-breadcrumbs": ["../src"]
-  },
 }
