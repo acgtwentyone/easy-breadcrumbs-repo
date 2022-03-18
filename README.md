@@ -88,7 +88,7 @@ Here is the customization properties you may use in order to customize your brea
 
 ## Maintainers
 
-[@acgtwentyone@gmail.com](https://github.com/acgtwentyone)
+[@acgtwentyone](https://github.com/acgtwentyone)
 
 ## Contributing
 
@@ -100,4 +100,4 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ## License
 
-MIT © 2021 Antonio Goncalves
+[MIT](https://opensource.org/licenses/MIT) © 2021 Antonio Goncalves
