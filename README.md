@@ -33,14 +33,24 @@ import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 
 Use as a component
 ```
+// initial crumb items, he we set one item, feel free to initialize it with more itens
 const [crumbs, setCrumbs] = useState([
     { id: 0, title: 'Root' }
 ])
+
+// initial selected crumbs, must be one crumb item
 const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
     id: 0,
     title: 'Root',
 })
 
+// on crumb press event handler
+const __onCrumbPress = (crumb: Crumb) => {
+    console.log(crumb.id)
+    // console.log('Selected', `Crumb ${crumb.title} selected`)
+}
+
+// your crumbs component call
 <EasyBreadcrumb
     crumbs={crumbs}
     setCrumbs={setCrumbs}
@@ -50,7 +60,7 @@ const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
 />
 ```
 
-#### for concrete example, please check the example folder in this repo
+#### for concrete example, please check the example folder
 
 ## API
 Here is the customization properties you may use in order to customize your breadcrumb. There is brief description of prop, type, option, and description 
