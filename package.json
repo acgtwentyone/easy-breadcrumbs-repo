@@ -1,7 +1,7 @@
 {
   "name": "react-native-easy-breadcrumbs",
-  "version": "1.5.0",
-  "description": "",
+  "version": "1.6.0",
+  "description": "Android / ios package to create customizable breadcrumbs to use in react native projects",
   "homepage": "https://github.com/acgtwentyone/easy-breadcrumbs-repo",
   "main": "src/index.tsx",
   "types": "lib/index.d.ts",
