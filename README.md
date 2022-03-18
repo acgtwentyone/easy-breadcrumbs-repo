@@ -4,7 +4,9 @@
 
 Android / ios package to create customizable breadcrumbs to use in react native projects
 
-No need to re-invent the wheel. Its already been done. Just use it and take advantage of open source projects.
+No need to re-invent the wheel. Its already been done. Just use it and take advantage of open source projects. 
+
+Usefull for exemple, let's say we are using this library to create a breadcrumbs to navigate between folders
 
 ## Table of Contents
 

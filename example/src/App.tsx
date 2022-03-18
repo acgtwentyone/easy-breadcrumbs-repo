@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Alert, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 
 interface Folder {
@@ -10,35 +10,47 @@ interface Folder {
 const App = () => {
   const [crumbs, setCrumbs] = useState([
     { id: 0, title: 'Root' },
+    /**
+     * opcional additional items ex:
+     */
     // { id: 2, title: 'Second Crumb' },
     // { id: 3, title: 'Third Crumb' },
     // { id: 4, title: 'Four Crumb' },
   ])
+  // set first crumb as selected
   const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
     id: 0,
     title: 'Root',
   })
 
+  /**
+   * Fired when a crumb is pressed
+   * @param crumb Crumb
+   */
   const __onCrumbPress = (crumb: Crumb) => {
-    // console.log(crumb.id)
-    // Alert.alert('Selected', `Crumb ${crumb.title} selected`)
+    console.log(crumb.id)
+    // console.log('Selected', `Crumb ${crumb.title} selected`)
   }
 
+  /**
+   * Ex: imagine we are using creating a breadcrumb to navigate between folders
+   */
   const folders: Folder[] = [
     { id: 1, name: 'Documents 2019' },
     { id: 2, name: 'Documents 2020' },
     { id: 3, name: 'Documents 2021' },
   ]
 
+  /**
+   * Intended to set selected crumb based on folder pressed
+   * @param folder Folder
+   */
   const __onFolderPress = (folder: Folder) => {
-    // Alert.alert('Selected', `Crumb ${folder.name} selected`)
     let crumb = { id: folder.id, title: folder.name }
-    if (crumbs.filter((item) => item.id === folder.id).length === 0) {
+    if (crumbs.filter((item) => item.id === crumb.id).length === 0)
       setCrumbs([...crumbs, crumb])
-      setSelectedCrumb(crumb)
-    } else {
-      setSelectedCrumb(crumb)
-    }
+
+    setSelectedCrumb(crumb)
   }
 
   return (
