@@ -1,5 +1,5 @@
 import React from 'react'
-import { NativeModules, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { FlatList, NativeModules, StyleSheet, Text, View } from 'react-native'
 
 import AppTouchableOpacity from './AppTouchableOpacity'
 
@@ -19,9 +19,16 @@ interface Props {
   selectedCrumbStyle?: {}
   setSelectedCrumb: (crumb: Crumb) => void
   setCrumbs: (crumbs: Crumb[]) => void
-  scrollable?: boolean
+  flatlist?: boolean
   unselectedCrumbStyle?: {}
   unselectedCrumbTextStyle?: {}
+  horizontal?: boolean
+  contentContainerStyle?: {}
+  flatlistProps?: {}
+}
+
+interface RenderItemProps {
+  item: Crumb
 }
 
 export const EasyBreadcrumb: React.FC<Props> = ({
@@ -34,10 +41,13 @@ export const EasyBreadcrumb: React.FC<Props> = ({
   selectedCrumb,
   setCrumbs,
   setSelectedCrumb,
-  scrollable = true,
+  flatlist = true,
   unselectedCrumbStyle,
   unselectedCrumbItemStyle,
   unselectedCrumbTextStyle,
+  horizontal = false,
+  contentContainerStyle,
+  flatlistProps,
 }) => {
   const onPress = (crumb: Crumb) => {
     onCrumbPress ? onCrumbPress(crumb) : ''
@@ -53,48 +63,48 @@ export const EasyBreadcrumb: React.FC<Props> = ({
     setSelectedCrumb(crumb)
   }
 
+  const RenderItem: React.FC<RenderItemProps> = ({ item }) => (
+    <>
+      <AppTouchableOpacity
+        key={item.id}
+        onPress={() => onPress(item)}
+        style={
+          item === selectedCrumb
+            ? [styles.selectedCrumb, { ...selectedCrumbStyle }]
+            : [styles.unselectedCrumb, { ...unselectedCrumbStyle }]
+        }
+      >
+        <View
+          style={
+            item === selectedCrumb
+              ? [styles.selectedCrumbItem, { ...selectedCrumbItemStyle }]
+              : [styles.unselectedCrumbItem, { ...unselectedCrumbItemStyle }]
+          }
+        >
+          <Text
+            style={
+              item === selectedCrumb
+                ? [styles.selectedCrumbText, { ...selectedCrumbTextStyle }]
+                : [styles.unselectedCrumbText, { ...unselectedCrumbTextStyle }]
+            }
+          >
+            {item.title}
+          </Text>
+        </View>
+      </AppTouchableOpacity>
+      )
+    </>
+  )
+
+  const renderItem: React.FC<RenderItemProps> = ({ item }) => (
+    <RenderItem item={item} />
+  )
+
   const __renderCrumbs = () => {
     return (
       <>
         {crumbs.map((crumb) => {
-          return (
-            <AppTouchableOpacity
-              key={crumb.id}
-              onPress={() => onPress(crumb)}
-              style={
-                crumb === selectedCrumb
-                  ? [styles.selectedCrumb, { ...selectedCrumbStyle }]
-                  : [styles.unselectedCrumb, { ...unselectedCrumbStyle }]
-              }
-            >
-              <View
-                style={
-                  crumb === selectedCrumb
-                    ? [styles.selectedCrumbItem, { ...selectedCrumbItemStyle }]
-                    : [
-                        styles.unselectedCrumbItem,
-                        { ...unselectedCrumbItemStyle },
-                      ]
-                }
-              >
-                <Text
-                  style={
-                    crumb === selectedCrumb
-                      ? [
-                          styles.selectedCrumbText,
-                          { ...selectedCrumbTextStyle },
-                        ]
-                      : [
-                          styles.unselectedCrumbText,
-                          { ...unselectedCrumbTextStyle },
-                        ]
-                  }
-                >
-                  {crumb.title}
-                </Text>
-              </View>
-            </AppTouchableOpacity>
-          )
+          return <RenderItem item={crumb} />
         })}
       </>
     )
@@ -102,16 +112,20 @@ export const EasyBreadcrumb: React.FC<Props> = ({
 
   return (
     <>
-      {scrollable ? (
-        <View>
-          <ScrollView
-            contentContainerStyle={[styles.scrollview, { ...containerStyle }]}
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-          >
-            {__renderCrumbs()}
-          </ScrollView>
-        </View>
+      {flatlist ? (
+        <FlatList
+          data={crumbs}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          horizontal={horizontal}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[
+            styles.contentContainerStyle,
+            { ...contentContainerStyle },
+          ]}
+          {...flatlistProps}
+        />
       ) : (
         <View style={[styles.container, { ...containerStyle }]}>
           {__renderCrumbs()}
@@ -122,6 +136,10 @@ export const EasyBreadcrumb: React.FC<Props> = ({
 }
 
 const styles = StyleSheet.create({
+  contentContainerStyle: {
+    padding: 16,
+  },
+
   chevron: {
     marginLeft: 8,
   },
@@ -130,10 +148,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     padding: 8,
-  },
-
-  scrollview: {
-    paddingHorizontal: 16,
   },
 
   selectedCrumbItem: {

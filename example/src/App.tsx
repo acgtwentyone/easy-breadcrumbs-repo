@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 
-interface Folder {
-  id: number
-  name: string
-}
+// interface Folder {
+//   id: number
+//   name: string
+// }
 
 const App = () => {
-  const [crumbs, setCrumbs] = useState([
+  const [crumbs, setCrumbs] = useState<Crumb[]>([
     { id: 0, title: 'Root' },
     /**
      * opcional additional items ex:
@@ -35,23 +35,23 @@ const App = () => {
   /**
    * Ex: imagine we are using creating a breadcrumb to navigate between folders
    */
-  const folders: Folder[] = [
-    { id: 1, name: 'Documents 2019' },
-    { id: 2, name: 'Documents 2020' },
-    { id: 3, name: 'Documents 2021' },
-  ]
+  // const folders: Folder[] = [
+  //   { id: 1, name: 'Documents 2019' },
+  //   { id: 2, name: 'Documents 2020' },
+  //   { id: 3, name: 'Documents 2021' },
+  // ]
 
   /**
    * Intended to set selected crumb based on folder pressed
    * @param folder Folder
    */
-  const __onFolderPress = (folder: Folder) => {
-    let crumb = { id: folder.id, title: folder.name }
-    if (crumbs.filter((item) => item.id === crumb.id).length === 0)
-      setCrumbs([...crumbs, crumb])
+  // const __onFolderPress = (folder: Folder) => {
+  //   let crumb = { id: folder.id, title: folder.name }
+  //   if (crumbs.filter((item) => item.id === crumb.id).length === 0)
+  //     setCrumbs([...crumbs, crumb])
 
-    setSelectedCrumb(crumb)
-  }
+  //   setSelectedCrumb(crumb)
+  // }
 
   return (
     <>
@@ -64,7 +64,7 @@ const App = () => {
         // chevron={false}
         // selectedCrumbTextStyle={styles.selectedCrumbText}
       />
-      <View style={styles.folderContainer}>
+      {/* <View style={styles.folderContainer}>
         {folders.map((folder) => (
           <Text
             key={folder.id}
@@ -74,7 +74,7 @@ const App = () => {
             {folder.name}
           </Text>
         ))}
-      </View>
+      </View> */}
     </>
   )
 }

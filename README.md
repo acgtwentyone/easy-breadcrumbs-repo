@@ -67,23 +67,22 @@ Here is the customization properties you may use in order to customize your brea
 
 | prop                        | type          | description                                                                 |
 | --------------------------- |:-------------:|:----------------------------------------------------------------------------|
-| chevron                     | boolean       | if to show chevron icon near of the crumb text. default to true             |
-| chevronStyle                | object        | style of the chevron icon (applied to the react native image)               |
+| flatlist                    | boolean       | if to use flatlist to show crumbs. default to true                          |
+| horizontal                  | boolean       | if to use flatlist horizontally                                             |
 | crumbs                      | array         | array of crumb items                                                        |
 | onCrumbPress                | function      | callback when crumb is pressed                                              |
 | containerStyle              | object        | crumb container style                                                       |
 | selectedCrumbTextStyle      | object        | selected cumb text style                                                    |
-| chevronWidth                | number        | chevron width (chevron image width)                                         |
-| chevronHeight               | number        | chevron height (chevron image height)                                       |
 | selectedCrumbItemStyle      | object        | selected crumb container style                                              |
 | selectedCrumbStyle          | object        | outside crumb container style (applied to the touchable opacity component)  |
 | selectedCrumb               | object        | selected crumb                                                              |
 | setCrumbs                   | function      | function to update crumbs or set crumbs                                     |
 | setSelectedCrumb            | function      | function to set selected crumb                                              |
-| scrollable                  | boolean       | if crumbs container is scrollable. default to true                          |
 | unselectedCrumbStyle        | object        | style to be applied to all not selected crumbs container                    |
 | unselectedCrumbItemStyle    | object        | style to be applied to all not selected crumbs item container               |
 | unselectedCrumbTextStyle    | object        | style to be applied to all not selected crumbs text                         |
+| contentContainerStyle       | object        | flatlist content style                                                      |
+| flatlistProps               | object        | style to override over flatlist                                             |
 
 
 ## Maintainers
