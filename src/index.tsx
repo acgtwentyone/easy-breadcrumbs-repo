@@ -1,6 +1,5 @@
 import React from 'react'
 import { NativeModules, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Icon } from 'react-native-vector-icons/Icon'
 
 import AppTouchableOpacity from './AppTouchableOpacity'
 
@@ -10,8 +9,6 @@ export interface Crumb {
 }
 
 interface Props {
-  chevron?: boolean
-  chevronStyle?: {}
   containerStyle?: {}
   selectedCrumbItemStyle?: {}
   unselectedCrumbItemStyle?: {}
@@ -24,19 +21,14 @@ interface Props {
   setCrumbs: (crumbs: Crumb[]) => void
   scrollable?: boolean
   unselectedCrumbStyle?: {}
-  chevronWidth?: number
-  chevronHeight?: number
   unselectedCrumbTextStyle?: {}
 }
 
 export const EasyBreadcrumb: React.FC<Props> = ({
-  chevron = true,
-  chevronStyle,
   crumbs,
   onCrumbPress,
   containerStyle,
   selectedCrumbTextStyle,
-  chevronWidth,
   selectedCrumbItemStyle,
   selectedCrumbStyle,
   selectedCrumb,
@@ -100,14 +92,6 @@ export const EasyBreadcrumb: React.FC<Props> = ({
                 >
                   {crumb.title}
                 </Text>
-                {chevron && (
-                  <Icon
-                    name='chevron-right'
-                    size={chevronWidth ? chevronWidth : 30}
-                    color='#000'
-                    style={[styles.chevron, { ...chevronStyle }]}
-                  />
-                )}
               </View>
             </AppTouchableOpacity>
           )

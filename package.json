@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-breadcrumbs",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Android / ios package to create customizable breadcrumbs to use in react native projects",
   "homepage": "https://github.com/acgtwentyone/easy-breadcrumbs-repo",
   "main": "lib/index.js",
@@ -8,8 +8,8 @@
   "author": "António Gonçalves <acgtwentyone@gmail.com> (https://acg-goncalves.cv/)",
   "license": "MIT",
   "bugs": {
-    "url" : "https://github.com/acgtwentyone/easy-breadcrumbs-repo/issues",
-    "email" : "acgtwentyone@gmail.com"
+    "url": "https://github.com/acgtwentyone/easy-breadcrumbs-repo/issues",
+    "email": "acgtwentyone@gmail.com"
   },
   "files": [
     "android",
@@ -67,8 +67,6 @@
     ]
   },
   "dependencies": {
-    "react-native": "^0.66.3",
-    "@types/react-native-vector-icons": "^6.4.10",
-    "react-native-vector-icons": "^9.1.0"
+    "react-native": "^0.66.3"
   }
 }
