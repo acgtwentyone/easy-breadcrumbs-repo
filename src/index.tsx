@@ -45,13 +45,12 @@ export const EasyBreadcrumb: React.FC<Props> = ({
   unselectedCrumbStyle,
   unselectedCrumbItemStyle,
   unselectedCrumbTextStyle,
-  horizontal = false,
+  horizontal = true,
   contentContainerStyle,
   flatlistProps,
 }) => {
   const onPress = (crumb: Crumb) => {
-    onCrumbPress ? onCrumbPress(crumb) : ''
-    // make a separate copy of the crumbs
+    onCrumbPress ? onCrumbPress(crumb) : null
     var copyOfCrumbs = [...crumbs]
     const selectedIndex = copyOfCrumbs.indexOf(
       crumbs.filter((item) => item.id === crumb.id)[0]
@@ -64,36 +63,32 @@ export const EasyBreadcrumb: React.FC<Props> = ({
   }
 
   const RenderItem: React.FC<RenderItemProps> = ({ item }) => (
-    <>
-      <AppTouchableOpacity
-        key={item.id}
-        onPress={() => onPress(item)}
+    <AppTouchableOpacity
+      onPress={() => onPress(item)}
+      style={
+        item === selectedCrumb
+          ? [styles.selectedCrumb, { ...selectedCrumbStyle }]
+          : [styles.unselectedCrumb, { ...unselectedCrumbStyle }]
+      }
+    >
+      <View
         style={
           item === selectedCrumb
-            ? [styles.selectedCrumb, { ...selectedCrumbStyle }]
-            : [styles.unselectedCrumb, { ...unselectedCrumbStyle }]
+            ? [styles.selectedCrumbItem, { ...selectedCrumbItemStyle }]
+            : [styles.unselectedCrumbItem, { ...unselectedCrumbItemStyle }]
         }
       >
-        <View
+        <Text
           style={
             item === selectedCrumb
-              ? [styles.selectedCrumbItem, { ...selectedCrumbItemStyle }]
-              : [styles.unselectedCrumbItem, { ...unselectedCrumbItemStyle }]
+              ? [styles.selectedCrumbText, { ...selectedCrumbTextStyle }]
+              : [styles.unselectedCrumbText, { ...unselectedCrumbTextStyle }]
           }
         >
-          <Text
-            style={
-              item === selectedCrumb
-                ? [styles.selectedCrumbText, { ...selectedCrumbTextStyle }]
-                : [styles.unselectedCrumbText, { ...unselectedCrumbTextStyle }]
-            }
-          >
-            {item.title}
-          </Text>
-        </View>
-      </AppTouchableOpacity>
-      )
-    </>
+          {item.title}
+        </Text>
+      </View>
+    </AppTouchableOpacity>
   )
 
   const renderItem: React.FC<RenderItemProps> = ({ item }) => (
@@ -119,7 +114,6 @@ export const EasyBreadcrumb: React.FC<Props> = ({
           keyExtractor={(item) => item.id.toString()}
           horizontal={horizontal}
           showsHorizontalScrollIndicator={false}
-          showsVerticalScrollIndicator={false}
           contentContainerStyle={[
             styles.contentContainerStyle,
             { ...contentContainerStyle },

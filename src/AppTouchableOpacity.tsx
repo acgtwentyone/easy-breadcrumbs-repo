@@ -20,7 +20,7 @@ const AppTouchableOpacity: React.FC<Props> = ({
 }: Props) => {
   return (
     <TouchableOpacity
-      hitSlop={hitSlop ? hitSlop : { top: 16, bottom: 16, left: 16, right: 16 }}
+      hitSlop={hitSlop ? hitSlop : { top: 8, bottom: 8, left: 16, right: 16 }}
       style={[styles.container, { ...style }]}
       {...props}
       onPress={onPress}
