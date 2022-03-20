@@ -89,7 +89,7 @@ Here is the customization properties you may use in order to customize your brea
 
 ## Contributing
 
-See [the contributing file](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/CONTRIBUTING.md)!
+See the [contributing file](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/CONTRIBUTING.md)!
 
 ## Community
 This package is open source. Please read the [code-of-conduting](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/CODE_OF_CONDUCT.md)
