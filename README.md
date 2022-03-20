@@ -92,7 +92,7 @@ Here is the customization properties you may use in order to customize your brea
 See [the contributing file](contributing.md)!
 
 ## Community
-This package is open source. Please read the [code-of-conduting](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/CODE_OF_CONDUCT.md)
+This package is open source. Please read the [code-of-conduting]()
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo#readme) specification.
 
