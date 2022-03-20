@@ -93,7 +93,7 @@ See [the contributing file](contributing.md)!
 
 PRs accepted.
 
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo/blob/main/LICENSE) specification.
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo#readme) specification.
 
 ## License
 
