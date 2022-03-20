@@ -91,8 +91,6 @@ Here is the customization properties you may use in order to customize your brea
 
 See [the contributing file](contributing.md)!
 
-PRs accepted.
-
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo#readme) specification.
 
 ## License
