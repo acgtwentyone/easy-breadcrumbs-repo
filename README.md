@@ -16,7 +16,7 @@ Breadcrumbs made easy. Usefull for exemple, let's say we are using this library 
 - [License](#license)
 
 ## Install
-Make sure you have [node](https://nodejs.org/en/) and instaled globaly. And just run this command
+Make sure you have [node](https://nodejs.org/en/) and instaled globaly. Open your terminal and then type this command
 
 ```
 npm i react-native-easy-breadcrumbs
@@ -90,6 +90,9 @@ Here is the customization properties you may use in order to customize your brea
 ## Contributing
 
 See [the contributing file](contributing.md)!
+
+## Community
+This package is open source. Please read the [code-of-conduting](https://github.com/acgtwentyone/easy-breadcrumbs-repo/CODE_OF_CUNDUCTING.md)
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/acgtwentyone/easy-breadcrumbs-repo#readme) specification.
 
