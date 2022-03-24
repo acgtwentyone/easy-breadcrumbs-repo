@@ -2,7 +2,7 @@
 
 If you have found an issue or would like to request a new feature, simply create a new issue. Be sure to fill out as much information as possible.
 
-If this is your first open source contribution, please take a look at this guide.
+If this is your first open source contribution, please take a look at this [guide](https://github.com/freeCodeCamp/how-to-contribute-to-open-source).
 
 Reporting Bugs & Feature Requests If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/acgtwentyone/easy-breadcrumbs-repo/issues) and [pull requests](https://github.com/acgtwentyone/easy-breadcrumbs-repo/pulls) before filing a new issue.
 
