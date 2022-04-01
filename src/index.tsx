@@ -148,12 +148,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginRight: 8,
+    padding: 4,
   },
 
   unselectedCrumbItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 8,
+    padding: 4,
   },
 
   selectedCrumbText: {
