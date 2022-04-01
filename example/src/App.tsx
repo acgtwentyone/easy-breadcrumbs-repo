@@ -9,13 +9,13 @@ interface Folder {
 
 const App = () => {
   const [crumbs, setCrumbs] = useState<Crumb[]>([
-    { id: 0, title: 'First Crumb' },
+    { id: 0, title: 'First' },
     /**
      * opcional additional items ex:
      */
-    { id: 1, title: 'Second Crumb' },
-    { id: 2, title: 'Third Crumb' },
-    { id: 3, title: 'Four Crumb' },
+    { id: 1, title: 'Second' },
+    { id: 2, title: 'Third' },
+    { id: 3, title: 'Four' },
   ])
   // set first crumb as selected
   const [selectedCrumb, setSelectedCrumb] = useState<Crumb>({
