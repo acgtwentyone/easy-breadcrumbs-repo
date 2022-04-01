@@ -3,7 +3,7 @@
   "version": "1.12.0",
   "description": "Android / ios package to create customizable breadcrumbs to use in react native projects",
   "homepage": "https://github.com/acgtwentyone/easy-breadcrumbs-repo",
-  "main": "lib/index.js",
+  "main": "src/index.tsx",
   "types": "lib/index.d.ts",
   "author": "António Gonçalves <acgtwentyone@gmail.com> (https://acg-goncalves.cv/)",
   "license": "MIT",
