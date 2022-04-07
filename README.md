@@ -4,19 +4,10 @@
 
 Android / ios package to create customizable breadcrumbs to use in react native projects.
 
-Breadcrumbs made easy. Usefull for exemple, let's say we are using this library to create a breadcrumbs to navigate between folders
-
-## Table of Contents
-
-- [Install](#install)
-- [Usage](#usage)
-- [API](#api)
-- [Maintainers](#maintainers)
-- [Contributing](#contributing)
-- [License](#license)
+Breadcrumbs made easy. Usefull for exemple, let's say we are using this library to create a breadcrumbs to navigate between folders.
 
 ## Install
-Make sure you have [node](https://nodejs.org/en/) and instaled globaly. Open your terminal and then type this command
+Make sure you have [node](https://nodejs.org/en/) and instaled globaly. Open your terminal and then type the following command
 
 ```
 npm i react-native-easy-breadcrumbs
@@ -30,7 +21,7 @@ import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 ```
 
 Use as a component
-```
+``` javascript
 // initial crumb items, he we set one item, feel free to initialize it with more itens
 const [crumbs, setCrumbs] = useState([
     { id: 0, title: 'Root' }
@@ -58,7 +49,7 @@ const __onCrumbPress = (crumb: Crumb) => {
 />
 ```
 
-#### for concrete example, please check the example folder
+Please check the example folder.
 
 ## API
 Here is the customization properties you may use in order to customize your breadcrumb. There is brief description of prop, type, option, and description 
