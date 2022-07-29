@@ -16,7 +16,7 @@ npm i react-native-easy-breadcrumbs
 ## Usage
 
 Import this module:
-```
+```javascript
 import { Crumb, EasyBreadcrumb } from 'react-native-easy-breadcrumbs'
 ```
 
