@@ -6,7 +6,7 @@ Android / ios package to create customizable breadcrumbs to use in react native 
 
 Breadcrumbs made easy. Usefull for exemple, let's say we are using this library to create a breadcrumbs to navigate between folders.
 
-This package was built using the [React Native Module Template](https://github.com/demchenkoalex/react-native-module-template).
+This package was built using [React Native Module Template](https://github.com/demchenkoalex/react-native-module-template).
 
 ## Install
 Make sure you have [node](https://nodejs.org/en/) and instaled globaly. Open your terminal and then type the following command
